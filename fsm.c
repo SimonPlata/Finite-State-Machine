@@ -18,18 +18,18 @@ void fsm() {
 	static int state = 0;
 	
 	switch(state) {
-		state_0:	s0_io_scanning_snapshot();
+		case state_0:	s0_io_scanning_snapshot();
 							if(state_0_condition_0) {
 								state = next_state;
-								state_0_action_0();
+								next_state_action_0();
 							}
 							else if(state_0_condition_1) {
 								state = next_state;
-								state_0_action_1();
+								next_state_action_1();
 							}
 							else if(state_0_condition_n) {
 								state = next_state;
-								state_0_action_n();
+								next_state_action_n();
 							}
 							else {
 								state = same_state;
@@ -37,18 +37,18 @@ void fsm() {
 							}
 							break;
 							
-		state_1:	s1_io_scanning_snapshot();
+		case state_1:	s1_io_scanning_snapshot();
 							if(state_1_condition_0) {
 								state = next_state;
-								state_1_action_0();
+								next_state_action_0();
 							}
 							else if(state_1_condition_1) {
 								state = next_state;
-								state_1_action_1();
+								next_state_action_1();
 							}
 							else if(state_1_condition_n) {
 								state = next_state;
-								state_1_action_n();
+								next_state_action_n();
 							}
 							else {
 								state = same_state;
@@ -56,18 +56,18 @@ void fsm() {
 							}
 							break;
 							
-		state_n:	sn_io_scanning_snapshot();
+		case state_n:	sn_io_scanning_snapshot();
 							if(state_n_condition_0) {
 								state = next_state;
-								state_1_action_0();
+								next_state_action_0();
 							}
 							else if(state_n_condition_1) {
 								state = next_state;
-								state_1_action_1();
+								next_state_action_1();
 							}
 							else if(state_n_condition_n) {
 								state = next_state;
-								state_1_action_n();
+								next_state_action_n();
 							}
 							else {
 								state = same_state;
