@@ -8,8 +8,8 @@
  * read at once at the begining of the loop and freeze). The scanning method has an
  * impact in the conditions evaluation priority.
  *
- * Created 25-Sep-2024
- * by Simón Plata
+ * Created 25-Sep-2024 by Simón Plata
+ * Updated 26-Aug-2025 by Simón Plata
  *
  */
  
@@ -75,7 +75,7 @@ void fsm_update() {
 							}
 							break;
 							
-		defaul:				state = 0;
+		default:			state = 0;
 							unknown_state_action();
 							break;
 	}
