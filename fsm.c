@@ -38,8 +38,8 @@ void fsm_update() {
 								state_0_condition_n_next_state_action();
 							}
 							else {
-								state = same_state;
-								no_action();
+								state = state_0;
+								state_0_loop_action();
 							}
 							break;
 							
@@ -57,8 +57,8 @@ void fsm_update() {
 								state_1_condition_n_next_state_action();
 							}
 							else {
-								state = same_state;
-								no_action();
+								state = state_1;
+								state_1_loop_action();
 							}
 							break;
 							
@@ -76,8 +76,8 @@ void fsm_update() {
 								state_n_condition_n_next_state_action();
 							}
 							else {
-								state = same_state;
-								no_action();
+								state = state_n;
+								state_n_loop_action();
 							}
 							break;
 							
