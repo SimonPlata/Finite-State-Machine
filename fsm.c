@@ -14,22 +14,22 @@
  */
  
  
-void fsm() {
+void fsm_update() {
 	static int state = 0;
 	
 	switch(state) {
-		case state_0:	s0_io_scanning_snapshot();
+		case state_0:		state_0_io_scanning_snapshot();
 							if(state_0_condition_0) {
-								state = next_state;
-								next_state_action_0();
+								state = state_0_condition_0_next_state;
+								state_0_condition_0_next_state_action();
 							}
 							else if(state_0_condition_1) {
-								state = next_state;
-								next_state_action_1();
+								state = state_0_condition_1_next_state;
+								state_0_condition_1_next_state_action();
 							}
 							else if(state_0_condition_n) {
-								state = next_state;
-								next_state_action_n();
+								state = state_0_condition_n_next_state;
+								state_0_condition_n_next_state_action();
 							}
 							else {
 								state = same_state;
@@ -37,18 +37,18 @@ void fsm() {
 							}
 							break;
 							
-		case state_1:	s1_io_scanning_snapshot();
+		case state_1:		state_1_io_scanning_snapshot();
 							if(state_1_condition_0) {
-								state = next_state;
-								next_state_action_0();
+								state = state_1_condition_0_next_state;
+								state_1_condition_0_next_state_action();
 							}
 							else if(state_1_condition_1) {
-								state = next_state;
-								next_state_action_1();
+								state = state_1_condition_1_next_state;
+								state_1_condition_1_next_state_action();
 							}
 							else if(state_1_condition_n) {
-								state = next_state;
-								next_state_action_n();
+								state = state_1_condition_n_next_state;
+								state_1_condition_n_next_state_action();
 							}
 							else {
 								state = same_state;
@@ -56,18 +56,18 @@ void fsm() {
 							}
 							break;
 							
-		case state_n:	sn_io_scanning_snapshot();
+		case state_n:		state_n_io_scanning_snapshot();
 							if(state_n_condition_0) {
-								state = next_state;
-								next_state_action_0();
+								state = state_n_condition_0_next_state;
+								state_n_condition_0_next_state_action();
 							}
 							else if(state_n_condition_1) {
-								state = next_state;
-								next_state_action_1();
+								state = state_n_condition_1_next_state;
+								state_n_condition_1_next_state_action();
 							}
 							else if(state_n_condition_n) {
-								state = next_state;
-								next_state_action_n();
+								state = state_n_condition_n_next_state;
+								state_n_condition_n_next_state_action();
 							}
 							else {
 								state = same_state;
@@ -75,7 +75,7 @@ void fsm() {
 							}
 							break;
 							
-		defaul:		state = 0;
+		defaul:				state = 0;
 							unknown_state_action();
 							break;
 	}
