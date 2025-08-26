@@ -15,9 +15,15 @@
  
  
 void fsm_update() {
-	static int state = 0;
+	static int state = start;
+
+	general_io_scanning_snapshot();
 	
 	switch(state) {
+		case start:			state = state_0;
+							fsm_setup();
+							break;
+		
 		case state_0:		state_0_io_scanning_snapshot();
 							if(state_0_condition_0) {
 								state = state_0_condition_0_next_state;
@@ -75,7 +81,7 @@ void fsm_update() {
 							}
 							break;
 							
-		default:			state = 0;
+		default:			state = start;
 							unknown_state_action();
 							break;
 	}
