@@ -4,9 +4,9 @@
  * Condition evaluation priority is defined by the position in the evaluation sequence.
  * State actions should short and not blocking. Long and complex actions should
  * be subdivided in additional states or in a sub-machine.
- * I/O scanning could be by demmand (every condition reads it I/O) or snapshot (All I/O
- * read at once at the begining of the loop and freeze). The scanning method has an
- * impact in the conditions evaluation priority.
+ * I/O scanning could be by demmand (every condition reads it I/O) or general snapshot
+ * (All I/O read at once at the begining of the loop and freeze). The scanning method
+ * has an impact in the conditions evaluation priority.
  *
  * Created 25-Sep-2024 by Simón Plata
  * Updated 26-Aug-2025 by Simón Plata
